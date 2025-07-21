@@ -1,6 +1,6 @@
-import mongoose, { Collection } from "mongoose";
+import mongoose from "mongoose";
 
-const userModel = new schema(
+const userModel = new mongoose.Schema(
   {
     name: {
       type: String,
@@ -17,10 +17,11 @@ const userModel = new schema(
     },
   },
   {
-    Timestamp: true,
-    Collection: 'users'
+    timestamp: true,
+    collection: 'users'
   });
 
 const User = mongoose.model('User', userModel);
 
-export default userModel;
+
+export default User;
